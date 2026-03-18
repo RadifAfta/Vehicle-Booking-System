@@ -23,16 +23,23 @@ Aplikasi web berbasis Laravel untuk pemesanan kendaraan perusahaan tambang denga
 Semua akun menggunakan password yang sama: `password123`
 
 - Admin
+	- Nama: `Admin1`
 	- Email: `admin@booking.test`
 	- Role: `admin`
 - Penyetuju Level 1
+	- Nama: `Adi Saputra`
 	- Email: `approver1@booking.test`
 	- Role: `penyetujui`
 - Penyetuju Level 2
+	- Nama: `Budi Santoso`
 	- Email: `approver2@booking.test`
 	- Role: `penyetujui`
 
 ## Struktur Data (ERD Implemented)
+
+Referensi ERD (dbdiagram.io):
+
+- https://dbdiagram.io/d/69b8c4e9fb2db18e3b97169c
 
 Tabel utama yang diimplementasikan:
 
@@ -43,6 +50,13 @@ Tabel utama yang diimplementasikan:
 - `pemesanan`
 - `log_persetujuan`
 - `riwayat_pemakaian`
+- `log_aktivitas`
+
+## Diagram Activity
+
+Referensi diagram activity (Draw.io export):
+
+- https://drive.google.com/file/d/1IfU-X-Sh6OWGWROe6kzWYWLbZZEzkVaO/view?usp=sharing
 
 ## Cara Menjalankan Aplikasi
 
