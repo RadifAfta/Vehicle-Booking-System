@@ -1,0 +1,16 @@
+.git
+.gitignore
+.env
+# Abaikan semua file .env lainnya KECUALI .env.example
+.env.*
+!.env.example
+
+node_modules
+vendor
+storage/logs
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+public/hot
+Dockerfile*
+docker-compose*.yml

@@ -116,6 +116,65 @@ Akses aplikasi di:
 
 - `http://127.0.0.1:8000`
 
+## Menjalankan dengan Docker (DevOps Ready)
+
+Project ini sudah disiapkan agar bisa dijalankan menggunakan Docker Compose dengan 3 service:
+
+- `app` : Laravel (PHP-FPM)
+- `web` : Nginx
+- `db` : MySQL 8
+
+### Prasyarat
+
+- Docker Desktop (Windows/Mac) atau Docker Engine + Docker Compose (Linux)
+
+### Menjalankan service
+
+```bash
+docker compose up -d --build
+```
+
+### Akses aplikasi
+
+- Web App: `http://localhost:8080`
+- MySQL Host Port: `3307`
+
+### Command umum Docker
+
+Stop service:
+
+```bash
+docker compose down
+```
+
+Stop + hapus volume database:
+
+```bash
+docker compose down -v
+```
+
+Lihat log service:
+
+```bash
+docker compose logs -f
+```
+
+Masuk ke container app:
+
+```bash
+docker compose exec app sh
+```
+
+### Catatan Docker
+
+- Migrasi otomatis berjalan saat container `app` start (`RUN_MIGRATIONS=true`).
+- Asset frontend sudah dibuild dalam image Docker (Vite build stage).
+- Konfigurasi ada di file:
+	- `Dockerfile`
+	- `docker-compose.yml`
+	- `docker/nginx/default.conf`
+	- `docker/entrypoint.sh`
+
 ## Panduan Penggunaan Singkat
 
 1. Login sebagai admin (`admin@booking.test`)
